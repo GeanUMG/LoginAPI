@@ -6,6 +6,11 @@ app.use(express.json()); // Middleware para manejar JSON en las solicitudes
 
 let users = []; // Arreglo temporal para almacenar usuarios
 
+// Ruta para la raíz
+app.get('/', (req, res) => {
+    res.send('Bienvenido a la API de gestión de usuarios');
+});
+
 // POST /users: Crear un nuevo usuario
 app.post('/users', (req, res) => {
     const { dpi, name, email, password } = req.body;
