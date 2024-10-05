@@ -2,25 +2,17 @@
 Api de Login
 
 # Que realiza la API
-La api podra crear,editar,podra listar y eliminar los usuarios Se probo la Api mandando un registro por medio de comando y funciono a continuacion dejo la API y como devuelve el usuario y los comandos localmente.
-
+El objetivo de esta hoja de trabajo es que los estudiantes implementen autenticación mediante JSON Web Tokens (JWT) en una API REST utilizando Node.js y Express.js. Los estudiantes deberán crear un sistema de login que genere un token JWT y proteger los endpoints de la API, de manera que solo los usuarios autenticados puedan acceder a ciertas rutas.
 #Link de la API (https://loginapi-4.onrender.com/)
 
-#Link para listar los usuarios ingresados (https://loginapi-4.onrender.com/users)
+#Link para listar los usuarios ingresados token requerido (https://loginapi-1-t937.onrender.com/users)
 
-#Los comandos para ejecutarlo localmente:
+Añadir autenticación con JWT mediante un endpoint /login, el cual recibirá las credenciales del usuario (como email y password) y devolverá un token JWT válido por 30 segundos. Además, deberán crear un archivo .env para manejar las respectivas variables de entorno, como la clave secreta.
 
-Crear Usuario:
-curl -X POST https://loginapi-4.onrender.com/users -H "Content-Type: application/json" -d '{"dpi":"123456789","name":"Juan Pérez","email":"juan@example.com","password":"contraseña123"}'
+Proteger los endpoints de la API utilizando un middleware que verifique el token JWT, asegurando que solo los usuarios autenticados puedan acceder a las siguientes rutas:
 
-Listar Usuarios:
-curl -X GET https://loginapi-4.onrender.com/users
-
-Actualizar:
-curl -X PUT https://loginapi-4.onrender.com/users/123456789 -H "Content-Type: application/json" -d '{"name":"Juan Pérez Actualizado","email":"juan.nuevo@example.com","password":"nuevaContraseña"}'
-
-Eliminar:
-
-curl -X DELETE https://loginapi-4.onrender.com/users/123456789
+GET /users: Listar todos los usuarios.
+PUT /users/:id: Actualizar un usuario por ID.
+DELETE /users/:id: Eliminar un usuario por ID.
 
 Api creada por: Gean Carlo Rosales 9490-21-2228
