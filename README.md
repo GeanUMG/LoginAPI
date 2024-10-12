@@ -1,5 +1,5 @@
-# LoginAPI
-Api de Login
+# LoginAPI typescript
+Api de Login typescript
 
 # Que realiza la API
 El objetivo de esta hoja de trabajo es que los estudiantes implementen autenticación mediante JSON Web Tokens (JWT) en una API REST utilizando Node.js y Express.js. Los estudiantes deberán crear un sistema de login que genere un token JWT y proteger los endpoints de la API, de manera que solo los usuarios autenticados puedan acceder a ciertas rutas.
