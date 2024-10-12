@@ -2,17 +2,23 @@
 Api de Login typescript
 
 # Que realiza la API
-El objetivo de esta hoja de trabajo es que los estudiantes implementen autenticación mediante JSON Web Tokens (JWT) en una API REST utilizando Node.js y Express.js. Los estudiantes deberán crear un sistema de login que genere un token JWT y proteger los endpoints de la API, de manera que solo los usuarios autenticados puedan acceder a ciertas rutas.
-#Link de la API (https://loginapi-4.onrender.com/)
+El objetivo de esta hoja de trabajo es que los estudiantes refactoricen la API REST creada en la Hoja de Trabajo 6 y 7 para agregar validaciones de tipo mediante TypeScript. Deberán adaptar el código existente para utilizar las características de TypeScript, como las interfaces y tipos, mejorando la seguridad del código y evitando errores de tipo en tiempo de ejecución. (https://loginapi-4.onrender.com/)
 
-#Link para listar los usuarios ingresados token requerido (https://loginapi-1-t937.onrender.com/users)
+#Link para listar los usuarios ingresados token requerido (https://loginapi-4.onrender.com/)
+Validaciones de Tipo:
 
-Añadir autenticación con JWT mediante un endpoint /login, el cual recibirá las credenciales del usuario (como email y password) y devolverá un token JWT válido por 30 segundos. Además, deberán crear un archivo .env para manejar las respectivas variables de entorno, como la clave secreta.
+Implementar validaciones de tipo para los usuarios.
+Definir una interfaz User que contenga las propiedades: name, email, password, y DPI.
+Usar dicha interfaz en todos los endpoints para validar que los objetos User tengan la estructura correcta.
 
-Proteger los endpoints de la API utilizando un middleware que verifique el token JWT, asegurando que solo los usuarios autenticados puedan acceder a las siguientes rutas:
+Refactorización de los Endpoints:
+POST /users: Validar que el cuerpo de la solicitud sea de tipo User antes de crear un nuevo usuario.
+GET /users: Asegurarse de que el arreglo de usuarios sea de tipo User[].
+PUT /users/: Verificar que los datos proporcionados para la actualización sean válidos de acuerdo a la interfaz User.
+DELETE /users/: Validar que el id del usuario exista y que los tipos de datos sean correctos.
 
-GET /users: Listar todos los usuarios.
-PUT /users/:id: Actualizar un usuario por ID.
-DELETE /users/:id: Eliminar un usuario por ID.
+Migración del Sistema de Autenticación JWT:
+Adaptar el sistema de autenticación JWT desarrollado en la Hoja de Trabajo 6 para TypeScript.
+Validar que los tokens y las credenciales de usuario sean del tipo adecuado utilizando tipos de TypeScript.
 
 Api creada por: Gean Carlo Rosales 9490-21-2228
